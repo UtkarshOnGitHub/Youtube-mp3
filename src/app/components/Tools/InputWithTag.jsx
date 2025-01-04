@@ -47,6 +47,7 @@ export function InputWithTag() {
 
   const onSubmit = async(e) => {
     setIsLoader(true)
+    setValue(null)
     const apiKey = process.env.NEXT_PUBLIC_API_SECRET_KEY;
     e.preventDefault();
     const options = {
@@ -69,11 +70,11 @@ export function InputWithTag() {
       }
   };
 
-  if(loader){
-    return<>
-        <Loader isLoading={loader}/>
-    </>
-  }
+//   if(loader){
+//     return<>
+//         <Loader isLoading={loader}/>
+//     </>
+//   }
   return (
     <div className="h-[40rem] flex flex-col justify-center  items-center px-4">
       <h2 className="mb-10 sm:mb-10 text-xl text-center sm:text-5xl text-white">
@@ -84,6 +85,7 @@ export function InputWithTag() {
         onChange={handleChange}
         onSubmit={onSubmit}
       />
+      {loader ? <Loader isLoading={loader} /> : null}
       {value ? <FileCard file={value} /> : null}
     </div>
   );
