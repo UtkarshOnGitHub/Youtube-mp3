@@ -7,8 +7,7 @@ import { Loader, MultiStepLoader } from "../Ui/MultiStepLoader";
 
 export function InputWithTag() {
   const placeholders = [
-    "Gorbi Kr le Download Video Download",
-    "Biku Tu Bhi  kr le",
+    "Paste Your Link Here",
     "Maze kro bina Ads k download kro",
     "Subscribe to Noxious Beats",
     "Follow On Instagram"
@@ -78,7 +77,7 @@ export function InputWithTag() {
   return (
     <div className="h-[40rem] flex flex-col justify-center  items-center px-4">
       <h2 className="mb-10 sm:mb-10 text-xl text-center sm:text-5xl text-white">
-        Paste your Link Here
+        Paste your Link Here (By Noxious)
       </h2>
       <PlaceholdersAndVanishInput
         placeholders={placeholders}
